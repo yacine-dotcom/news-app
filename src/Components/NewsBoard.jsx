@@ -8,12 +8,10 @@ const NewsBoard = ({ category }) => {
 
   useEffect(() => {
     const getData = async () => {
-      // const key = "8e8564d481db4acebc3f04ac358fdc33";
+      const key = "16461f31fca04029998cbe323cac7ff7";
 
       try {
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
-          import.meta.env.REACT_API_KEY
-        }`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`http error: Status  ${response.status}`);
